@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-body">
+            <div class="container">
+                <h2 style="margin-bottom: 50px; margin-top: 100px;">Doctor Details...!!!</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="Name"><b>Select the Doctor :</b></label></td>
+                            <td><select [value]="didi" [(ngModel)]="didi" (change)="getDoctorDetails(didi)">
+                                    <option value="default"><b>Default</b></option>
+                                    <option *ngFor="let i of doctor">{{i.dname}}</option>
+                                </select></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="container" style="margin-top: 100px;" *ngIf="show==true">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Doctor Name</th>
+                            <th>Number Of Patient Attended</th>
+                            <th>Specialization</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{this.doct.dname}}</td>
+                            <td>{{this.doct.patientAttended}}</td>
+                            <td>{{this.doct.specialistField}}</td>
+                            <td><button class="btn btn-info" (click)="register()">Register</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

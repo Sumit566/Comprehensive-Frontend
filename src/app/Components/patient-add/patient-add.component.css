@@ -1,0 +1,7 @@
+.card{
+    text-align: center;
+    background-image: url("/assets/images/patient3bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}

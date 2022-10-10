@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-body">
+    <form (ngSubmit)="onSubmit()">
+        <h1 class="text-center">Patient Details...!!</h1>
+        <table  style="margin-top: 130px; text-align: left;">
+            <tbody>
+                <tr>
+                    <td><label for="Patient_RegistrationID" ><b>Registration Id :</b></label></td>
+                    <td><input type="number" [(ngModel)]="patient.rid" id="RID" name="RID"></td>
+                </tr>
+                <tr><td><br></td></tr>
+                <tr>
+                    <td><label for="Patient_Name"><b>Patient Name : </b></label></td>
+                    <td><input type="text" [(ngModel)]="patient.pname" id="Name" name="Name" ></td>
+                </tr>
+                <tr><td><br></td></tr>
+                <tr>
+                    <td><label for="Patient_DOctor"><b>Patient's Doctor : </b></label></td>
+                    <td><input type="text" [(ngModel)]="patient.visitedDoctor" id="DName" name="DName"></td>
+                </tr>
+                <tr><td><br></td></tr>
+                <tr>
+                    <td><label for="Patient_Prescription"><b>Prescription : </b></label></td>
+                    <td><input type="text" [(ngModel)]="patient.prescription" id="Prescription" name="Prescription"></td>
+                </tr>
+                <tr><td><br></td></tr>
+                <tr>
+                    <td><label for="Patient_DateOFVisit"><b>Date Of Visit : </b></label></td>
+                    <td><input type="text" [(ngModel)]="patient.dateOfVisit" id="Date" name="Date"></td>
+                </tr>
+                <tr><td><br></td></tr>
+                <tr><td><button style="margin-top: 5px;" class="btn btn-success" type="submit">Submit</button></td></tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+</div>
+</div>

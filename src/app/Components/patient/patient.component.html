@@ -1,0 +1,68 @@
+<div class="container-fluid">
+<div class="card">
+    <div class="card-body">
+        <div class="container">
+            <h2 style="margin-bottom: 50px; margin-top: 100px;">Patient Details...!!!</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label for="Name"><b>Enter Patient Personal ID :</b></label></td>
+                        <td><input type="text" [(ngModel)]="PatientId" (change)="getPatientDetails(PatientId)"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container" style="margin-top: 100px;" *ngIf="show==true">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Patient_PersonalID</th>
+                        <th>Patient Name</th>
+                        <th>Patient_VisitedDocter</th>
+                        <th>Patient_DateVisited</th>
+                        <th>Patient_Prescription</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{this.pat.pid}}</td>
+                        <td>{{this.pat.pname}}</td>
+                        <td>{{this.pat.visitedDoctor}}</td>
+                        <td>{{this.pat.dateOfVisit}}</td>
+                        <td>{{this.pat.prescription}}</td>
+                        <td><button (click)="patientHistory(PatientId)" class="btn btn-info">History</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="container" style="margin-top: 100px;" *ngIf="tshow==true">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Patient Registration ID</th>
+                        <th>Patient Name</th>
+                        <th>Patient VisitedDocter</th>
+                        <th>Patient DateVisited</th>
+                        <th>Patient Prescription</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let i of temp">
+                        <td>{{this.i.rid}}</td>
+                        <td>{{this.i.pname}}</td>
+                        <td>{{this.i.visitedDoctor}}</td>
+                        <td>{{this.i.dateOfVisit}}</td>
+                        <td>{{this.i.prescription}}</td>
+                        <td><button (click)="patientUpdate(i.rid)" class="btn btn-info">Update</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-info" (click)="refresh()">Click here for Home Page</button>
+        </div>
+    </div>
+</div>
+</div>

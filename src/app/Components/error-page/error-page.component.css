@@ -1,0 +1,7 @@
+.container-fluid{
+    background-color: rgb(42, 52, 56);
+}
+.card{
+    background-color: rgb(224, 238, 238);
+    background-size: 100vh;
+}
